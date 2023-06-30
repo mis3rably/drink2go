@@ -1,0 +1,85 @@
+.menu-group__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  color: @basic-primary;
+}
+
+.menu-group__submenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-group__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: @basic-black;
+  padding: 8px 0;
+
+  &:hover,
+  &:focus {
+    color: @primary-lighter;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+
+  &--address,
+  &--tel {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &--address {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+    padding: 8px 0 3px 25px;
+    text-transform: none;
+    background-image: url("../../img/icons/stack.svg#address");
+    background-size: 13px 16px;
+    background-repeat: no-repeat;
+    background-position: left top 10px;
+
+    @media (min-width: @tablet-width) {
+      background-position: left 6px top 8px;
+    }
+  }
+
+  &--tel {
+    padding: 8px 0 3px 25px;
+    background-image: url("../../img/icons/stack.svg#phone");
+    background-size: 13px 16px;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    @media (min-width: @tablet-width) {
+      background-position: left 7px center;
+    }
+  }
+}
+
+.menu-group {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 1px solid @basic-secondary;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+    padding: 0;
+    flex: 1;
+  }
+}
